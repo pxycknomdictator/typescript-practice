@@ -8,6 +8,10 @@ TypeScript enhances JavaScript by introducing static types, helping to catch err
 
 ## Getting Started
 
+### Prerequisites
+
+You know about a basics of JavaScript + EcmaScript 6 aka ES6.
+
 ### Before We Start
 
 Make sure you have Node.js installed on your machine.
