@@ -35,5 +35,11 @@ isBoolean = false;
 // un_comment bellow code
 // isBoolean = "Noman"; Thats why I love Typescript
 
+// let countries: Array<string> = "Pakistan"; don't do that please
+/*
+  typescript yelling on me XD because
+  I clearly mentioned that countries variable contain an array with string but we are storing a string 
+*/
+
 // ====================== summary ======================
 // In typescript world you cant change any variable to another datatype like string to number or maybe boolean to array etc
