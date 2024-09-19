@@ -42,3 +42,37 @@ let languages: string[] = ["HTML", "CSS", "JavaScript", "Python", "Dart"];
 
 let onlyNumbers: number[] = [1, 2, 3, 4, 5, 6, 7];
 let onlyBooleans: Boolean[] = [true, false, false, false, true, true];
+
+// ====================== Example 3 ======================
+// Let’s talk about Objects. object contains multiples values with different data types so how we can specify the type of object? let's see
+
+let userInformation: {
+  id: number;
+  username: string;
+  email: string;
+  password: string;
+} = {
+  id: 9304893,
+  username: "Noman",
+  password: "MyStrongPassword",
+  email: "noman69@gmail.com",
+};
+
+// This is a poorly designed user information structure.
+// To solve this problem, TypeScript provides a feature known as interfaces. An interface is a way to define the structure of an object and specify how it should look.
+
+interface UserInformation {
+  id: number;
+  name: string;
+  email: string;
+  password: string;
+}
+
+let user_Information: UserInformation = {
+  id: 3894839,
+  name: "Noman",
+  email: "noman69@gmail.com",
+  password: "MyStrongPassword",
+};
+
+// This is called an interface.
