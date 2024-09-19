@@ -16,6 +16,7 @@
   array
   unions
   intersection
+  objects
 */
 
 // How do we determine which data type is best for storing a particular piece of information?
@@ -27,3 +28,17 @@ let user_name: string = "Noman";
 let user_email: string = "noman69@gmail.com"; // email contains alphabets + numeric + special characters so we need to store email in string
 let user_id: number = 9382048294;
 let isAdmin: Boolean = true;
+
+// Let’s talk about arrays. An array is a special data type that helps us store multiple pieces of data in a single variable.
+
+// ====================== Example 2 ======================
+// 1. How do we define the type of an array?
+
+let languages: string[] = ["HTML", "CSS", "JavaScript", "Python", "Dart"];
+
+// In this example, we clearly specify that we have an array that contains only strings. What happens if I try to add a different data type, like a number or a boolean? lets checking out!
+
+// languages.push(90) So we would get an error XD
+
+let onlyNumbers: number[] = [1, 2, 3, 4, 5, 6, 7];
+let onlyBooleans: Boolean[] = [true, false, false, false, true, true];
