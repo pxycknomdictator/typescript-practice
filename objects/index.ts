@@ -29,3 +29,29 @@ const user_1: User = {
     cvv: 9090,
   },
 };
+
+// what is interface re-opening or interface merging? if you familiar with object oriented programming this is for you lets create a interface
+
+interface Employee {
+  username: string;
+  email: string;
+  password: string;
+  isActive: boolean;
+}
+
+interface Employee {
+  admin: boolean;
+}
+
+// You can clearly see that I created two interfaces with the same name Employee instead of overriding each other, they merged.
+
+const employee: Employee = {
+  username: "Noman",
+  email: "noman69@gmail.com",
+  password: "shhhhhhhh",
+  isActive: false,
+  admin: true,
+};
+
+
+
