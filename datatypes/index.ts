@@ -110,4 +110,13 @@ db_user_id = true;
 db_user_id = "338948204892";
 db_user_id = 93488393939393;
 
+// another example of union
+const superHeros: (string | number)[] = [
+  "Batman",
+  "IronMan",
+  "Hulk",
+  "Superman",
+  90,
+];
+
 // You got it! A union means a single variable can contain different data types. If you want to create something interesting, or crazy go with unions!
