@@ -80,6 +80,8 @@ let user_Information: UserInformation = {
 
 // In the previous example of an array, we specified that this array contains only numbers, strings, booleans, etc. But what happens if our array contains objects? let's check it out how can we do that
 
+// ====================== Example 4 ======================
+
 interface EmployeeInformation {
   name: string;
   email: string;
@@ -97,3 +99,15 @@ employees.push({
   salary: 90000,
   workingHour: 6,
 });
+
+// ====================== Example 5 ======================
+
+// Let's talk about unions.
+
+let db_user_id: string | number | boolean;
+
+db_user_id = true;
+db_user_id = "338948204892";
+db_user_id = 93488393939393;
+
+// You got it! A union means a single variable can contain different data types. If you want to create something interesting, or crazy go with unions!
