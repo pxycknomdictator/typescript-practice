@@ -53,5 +53,49 @@ const employee: Employee = {
   admin: true,
 };
 
+/* Here's another way to create object types: using type. So what’s the difference between type and interface?
 
+  1. Interfaces with the same name will merge, but types will not.
+  2. Interfaces are primarily used for object structures, while types can represent all types.
 
+I know this can be a bit confusing! */
+
+// For example
+const userName: string = "Noman";
+
+// In this example i just gave my custom name to string type 😜
+type myString = string; // :P
+const userName1: myString = "Noman";
+
+// just like interface we can create object structure in type
+
+type myObject = {
+  name: string;
+  email: string;
+  password: string;
+};
+
+const user: myObject = {
+  name: "batman",
+  email: "batman@batman.com",
+  password: "Justice",
+};
+
+// ===================== summary =====================
+
+/*
+  Interface
+
+    Merging: Interfaces with the same name will merge (declaration merging).
+    Use Case: Primarily used for defining the shape of objects (like classes and objects).
+    Extensibility: Can extend other interfaces using extends.
+
+Type
+
+    No Merging: Types with the same name will result in an error; they do not merge.
+    Use Case: Can represent any type, including primitives, unions, intersections, and tuples.
+    Flexibility: More versatile, allowing for complex type definitions.
+
+    In short, use interface for object shapes and type for broader type definitions!
+
+*/
