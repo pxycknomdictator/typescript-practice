@@ -61,6 +61,7 @@ let userInformation: {
 // This is a poorly designed user information structure.
 // To solve this problem, TypeScript provides a feature known as interfaces. An interface is a way to define the structure of an object and specify how it should look.
 
+// The code you see on lines 65 to 69 is just the structure of an object. I repeat, the structure of an object.
 interface UserInformation {
   id: number;
   name: string;
@@ -76,3 +77,23 @@ let user_Information: UserInformation = {
 };
 
 // This is called an interface.
+
+// In the previous example of an array, we specified that this array contains only numbers, strings, booleans, etc. But what happens if our array contains objects? let's check it out how can we do that
+
+interface EmployeeInformation {
+  name: string;
+  email: string;
+  isActive: boolean;
+  salary: number;
+  workingHour: number;
+}
+
+let employees: Array<EmployeeInformation> = [];
+
+employees.push({
+  name: "Noman",
+  email: "noman69@gmail.com",
+  isActive: true,
+  salary: 90000,
+  workingHour: 6,
+});
