@@ -50,3 +50,14 @@ const createUser = (user: User): User => {
 console.log(createUser({ name: "Noman", email: "n@n.com" }));
 
 // you can do anything you want
+
+// Last example of functions suppose we have an function. The function should never reached its end point?
+
+function closeAllScripts(): never {
+  console.log("Blocked");
+  throw new Error("Execution halted.");
+}
+
+closeAllScripts();
+
+console.log("My rest code should not work :(");
