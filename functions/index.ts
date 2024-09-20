@@ -35,3 +35,18 @@ function greetings(): void {
 
 greetings();
 console.log("Hello world");
+
+// here is the last example and this time i will use arrow function
+
+interface User {
+  name: string;
+  email: string;
+}
+
+const createUser = (user: User): User => {
+  return user;
+};
+
+console.log(createUser({ name: "Noman", email: "n@n.com" }));
+
+// you can do anything you want
