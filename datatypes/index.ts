@@ -120,3 +120,18 @@ const superHeros: (string | number)[] = [
 ];
 
 // You got it! A union means a single variable can contain different data types. If you want to create something interesting, or crazy go with unions!
+
+// ====================== Example 6 ======================
+
+// let's talk about "any" datatype
+// In my country people says this dialogue "say no to corruption" But in the world of Ts aka Typescript we say "say no to use any" so what the hell is this any if you use any datatype its mean you can say any datatype is store in a variable that means you can switch off the power of typescript
+
+// example
+
+let my_email: any = "noman69@gmail.com";
+my_email = 69;
+my_email = false;
+my_email = [];
+my_email = {};
+
+// you can see after using any datatype the power or the whole concept of typescript is gone its seems like i am using Normal Js right? so please say no to use any in ts
