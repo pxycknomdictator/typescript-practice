@@ -34,14 +34,22 @@ makeOperations({ name: "Noman", email: "noman69@gmail.com", isAdmin: false });
 interface IUser {
   username: string;
   email: string;
-  password: string;
-  isAdmin: boolean;
 }
+const users: Array<IUser> = [
+  { username: "john", email: "john@gmai.com" },
+  { username: "jimmy", email: "jimmy@gmai.com" },
+];
 
-function returnAnyThingYouGot(element: string | number | IUser): string | number | IUser {
+function returnAnyThingYouGot(
+  element: string | number | IUser | IUser[]
+): string | number | IUser | IUser[] {
   return element;
 }
 
-returnAnyThingYouGot("")
-returnAnyThingYouGot(90)
-returnAnyThingYouGot({ username: "Noman", email: "n@n.com", password: "sheee", isAdmin: false })
+returnAnyThingYouGot("");
+returnAnyThingYouGot(90);
+returnAnyThingYouGot({ username: "Noman", email: "n@n.com" });
+returnAnyThingYouGot({ username: "Noman", email: "n@n.com" });
+returnAnyThingYouGot(users);
+
+// Hmm, looks like this code works fine, right? Yes, but it's a bit tricky and not very readable.
