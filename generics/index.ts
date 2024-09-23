@@ -53,3 +53,17 @@ returnAnyThingYouGot({ username: "Noman", email: "n@n.com" });
 returnAnyThingYouGot(users);
 
 // Hmm, looks like this code works fine, right? Yes, but it's a bit tricky and not very readable.
+
+// To fix all of these issues we use generics
+
+// Generics
+
+function getSomeData<Type>(user: Type): Type {
+  return user;
+}
+
+const myName = getSomeData("Noman");
+const age = getSomeData(89);
+const userObject = getSomeData({ username: "Jane", email: "jane@gmail.com" });
+
+// Generics make life easier! 🎉 Now we can handle any type without repeating code. Let's keep it simple and flexible! You can use any name for generics, like Type, T, or even Superman—it's just a placeholder. But we usually stick with T or Type most of the time.
