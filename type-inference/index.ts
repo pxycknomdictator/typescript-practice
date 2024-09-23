@@ -38,7 +38,7 @@ interface IUser {
   description: string;
 }
 
-let result: IUser;
+let result: IUser[];
 
 const fetchData = async (path: string) => {
   try {
@@ -52,4 +52,5 @@ const fetchData = async (path: string) => {
 
 (async () => {
   result = await fetchData("/post");
+  // result[0]. // un comment and put a dot and watch values
 })();
