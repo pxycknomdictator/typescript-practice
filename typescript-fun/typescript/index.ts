@@ -1,12 +1,17 @@
 const input = document.getElementById("inputField") as HTMLInputElement;
 const container = document.getElementById("container") as HTMLUListElement;
 const btn = document.getElementById("btn") as HTMLButtonElement;
-const databaseKey = "storageAccessKey";
-const database: string[] = [];
+const databaseKey: string = "storageAccessKey";
+
+function GetDataFromFakeDatabase(): string[] {
+  return JSON.parse(localStorage.getItem(databaseKey) || "[]");
+}
 
 function StoreDataInFakeDatabase(newTask: string[]): void {
   localStorage.setItem(databaseKey, JSON.stringify(newTask));
 }
+
+const database: string[] = GetDataFromFakeDatabase();
 
 function handleGenerateNewTasks(): void | string {
   let display: string = input.value;
