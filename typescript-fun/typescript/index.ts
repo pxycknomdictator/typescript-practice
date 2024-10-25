@@ -14,6 +14,16 @@ function handleGenerateNewTasks(): void | string {
   database.push(display);
   StoreDataInFakeDatabase(database);
   input.value = "";
+  RenderedAllTasks();
 }
+
+function RenderedAllTasks() {
+  container.innerHTML = "";
+  database.forEach((task: string) => {
+    container.innerHTML += `<li>${task}</li>`;
+  });
+}
+
+RenderedAllTasks();
 
 btn.addEventListener("click", handleGenerateNewTasks);
