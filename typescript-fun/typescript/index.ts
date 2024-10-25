@@ -1,11 +1,19 @@
 const input = document.getElementById("inputField") as HTMLInputElement;
 const container = document.getElementById("container") as HTMLUListElement;
 const btn = document.getElementById("btn") as HTMLButtonElement;
+const databaseKey = "storageAccessKey";
+const database: string[] = [];
 
-function handleGenerateNewTasks() {
+function StoreDataInFakeDatabase(newTask: string[]): void {
+  localStorage.setItem(databaseKey, JSON.stringify(newTask));
+}
+
+function handleGenerateNewTasks(): void | string {
   let display: string = input.value;
   if (display.trim() === "") return (display = "");
-  console.log(display);
+  database.push(display);
+  StoreDataInFakeDatabase(database);
+  input.value = "";
 }
 
 btn.addEventListener("click", handleGenerateNewTasks);
