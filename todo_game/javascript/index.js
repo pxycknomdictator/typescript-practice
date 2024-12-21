@@ -12,5 +12,13 @@ const addTodo = (event) => {
     todos.push({ id: Math.random(), todo: input.value });
     STORE_DATA_IN_LOCALSTORAGE(todos);
     input.value = "";
+    render_data();
 };
+const render_data = () => {
+    const lists = todos
+        .map((todo) => `<li id=${todo.id}>${todo.todo}</li>`)
+        .join("");
+    container.innerHTML = lists;
+};
+render_data();
 btn === null || btn === void 0 ? void 0 : btn.addEventListener("click", addTodo);
