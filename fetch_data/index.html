@@ -4,13 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github Account Analyzer</title>
+    <style>
+      img {
+        margin-top: 30px;
+        width: 100px;
+        border-radius: 50%;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      span {
+        display: block;
+        font-size: 14px;
+        margin-top: 5px;
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <section>
+      <h1>Github Account Analyzer</h1>
       <form id="form">
         <input type="text" id="username" placeholder="Enter Github Username" />
         <button type="submit">Submit</button>
       </form>
+      <span id="error"></span>
       <div id="result"></div>
     </section>
     <script src="./javascript/index.js"></script>
