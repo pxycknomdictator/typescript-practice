@@ -101,6 +101,69 @@ var Dog = /** @class */ (function (_super) {
     return Dog;
 }(Animal));
 var cat1 = new Cat("Tom");
-console.log(cat1.makeSound());
+// console.log(cat1.makeSound());
 var dog1 = new Dog("Spike");
-console.log(dog1.makeSound());
+var Product = /** @class */ (function () {
+    function Product(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    Product.prototype.getPrice = function () {
+        return this.price;
+    };
+    Product.prototype.setPrice = function (newPrice) {
+        if (newPrice >= 0) {
+            this.price = newPrice;
+        }
+        else {
+            console.log("Price cannot be negative!");
+        }
+    };
+    Product.prototype.getDetails = function () {
+        return "".concat(this.name, " costs $").concat(this.price, ".");
+    };
+    return Product;
+}());
+// Electronics Class
+var Electronics = /** @class */ (function (_super) {
+    __extends(Electronics, _super);
+    function Electronics(name, price, warranty) {
+        var _this = _super.call(this, name, price) || this;
+        _this.warranty = warranty;
+        return _this;
+    }
+    Electronics.prototype.getDetails = function () {
+        return "".concat(this.name, " costs $").concat(this.getPrice(), " with ").concat(this.warranty, " years warranty.");
+    };
+    Electronics.prototype.applyDiscount = function (percent) {
+        var discountAmount = (this.getPrice() * percent) / 100;
+        this.setPrice(this.getPrice() - discountAmount);
+    };
+    return Electronics;
+}(Product));
+// Clothing Class
+var Clothing = /** @class */ (function (_super) {
+    __extends(Clothing, _super);
+    function Clothing(name, price, size, material) {
+        var _this = _super.call(this, name, price) || this;
+        _this.size = size;
+        _this.material = material;
+        return _this;
+    }
+    Clothing.prototype.getDetails = function () {
+        return "".concat(this.name, " costs $").concat(this.getPrice(), ", Size: ").concat(this.size, ", Material: ").concat(this.material, ".");
+    };
+    Clothing.prototype.applyDiscount = function (percent) {
+        var discountAmount = (this.getPrice() * percent) / 100;
+        this.setPrice(this.getPrice() - discountAmount);
+    };
+    return Clothing;
+}(Product));
+var laptop = new Electronics("MacBook Pro", 2000, 2);
+console.log(laptop.getDetails());
+laptop.applyDiscount(10);
+console.log(laptop.getDetails());
+var tshirt = new Clothing("Nike T-Shirt", 50, "M", "Cotton");
+console.log(tshirt.getDetails());
+tshirt.applyDiscount(20);
+console.log(tshirt.getDetails());
