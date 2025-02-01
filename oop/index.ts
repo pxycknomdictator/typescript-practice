@@ -36,5 +36,41 @@ class BankAccount {
 }
 
 const nomanAccount = new BankAccount(9000);
-nomanAccount.deposit(4000);
-console.log(nomanAccount.withdraw(3000));
+// nomanAccount.deposit(4000);
+// console.log(nomanAccount.withdraw(3000));
+
+class Vehicle {
+  public brand: string;
+  public speed: number;
+
+  constructor(brand: string, speed: number) {
+    this.brand = brand;
+    this.speed = speed;
+  }
+
+  public displayInfo(): void {
+    console.log(`Brand: ${this.brand}, Speed: ${this.speed} km/h`);
+  }
+}
+
+class Car extends Vehicle {
+  private fuelType: string;
+
+  constructor(brand: string, speed: number, fuelType: string) {
+    super(brand, speed);
+    this.fuelType = fuelType;
+  }
+
+  public getFuelType(): string {
+    return this.fuelType;
+  }
+
+  public setFuelType(fuelType: string): void {
+    this.fuelType = fuelType;
+  }
+}
+
+const myCar = new Car("Toyota", 120, "Petrol");
+// console.log(myCar.getFuelType());
+// myCar.setFuelType("Diesel");
+// console.log(myCar.getFuelType());
