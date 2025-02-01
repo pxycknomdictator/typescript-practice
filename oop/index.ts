@@ -74,3 +74,26 @@ const myCar = new Car("Toyota", 120, "Petrol");
 // console.log(myCar.getFuelType());
 // myCar.setFuelType("Diesel");
 // console.log(myCar.getFuelType());
+
+abstract class Animal {
+  constructor(public name: string) {}
+  public abstract makeSound(): string;
+}
+
+class Cat extends Animal {
+  public makeSound(): string {
+    return `${this.name} meows`;
+  }
+}
+
+class Dog extends Animal {
+  public makeSound(): string {
+    return `${this.name} barks`;
+  }
+}
+
+const cat1 = new Cat("Tom");
+console.log(cat1.makeSound());
+
+const dog1 = new Dog("Spike");
+console.log(dog1.makeSound());

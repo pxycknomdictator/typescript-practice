@@ -74,3 +74,33 @@ var myCar = new Car("Toyota", 120, "Petrol");
 // console.log(myCar.getFuelType());
 // myCar.setFuelType("Diesel");
 // console.log(myCar.getFuelType());
+var Animal = /** @class */ (function () {
+    function Animal(name) {
+        this.name = name;
+    }
+    return Animal;
+}());
+var Cat = /** @class */ (function (_super) {
+    __extends(Cat, _super);
+    function Cat() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Cat.prototype.makeSound = function () {
+        return "".concat(this.name, " meows");
+    };
+    return Cat;
+}(Animal));
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Dog.prototype.makeSound = function () {
+        return "".concat(this.name, " barks");
+    };
+    return Dog;
+}(Animal));
+var cat1 = new Cat("Tom");
+console.log(cat1.makeSound());
+var dog1 = new Dog("Spike");
+console.log(dog1.makeSound());
